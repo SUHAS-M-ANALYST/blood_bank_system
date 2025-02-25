@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Bank Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Blood Bank Management System</h1>
+  </header>
+
+  <main>
+    <!-- Donor Management Section -->
+    <section id="donorSection">
+      <h2>Donor Management</h2>
+      <form id="donorForm">
+        <input type="text" id="donorName" placeholder="Donor Name" required>
+        <input type="text" id="donorBloodGroup" placeholder="Blood Group" required>
+        <input type="text" id="donorContact" placeholder="Contact Number" required>
+        <input type="text" id="donorAddress" placeholder="Address">
+        <button type="submit">Add Donor</button>
+      </form>
+      <h3>Donor List</h3>
+      <table id="donorTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Blood Group</th>
+            <th>Contact</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Donor rows will be added here dynamically -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Blood Inventory Section -->
+    <section id="inventorySection">
+      <h2>Blood Inventory</h2>
+      <form id="inventoryForm">
+        <input type="text" id="inventoryBloodGroup" placeholder="Blood Group" required>
+        <input type="number" id="inventoryUnits" placeholder="Units Available" required>
+        <button type="submit">Update Inventory</button>
+      </form>
+      <h3>Blood Stock</h3>
+      <table id="inventoryTable">
+        <thead>
+          <tr>
+            <th>Blood Group</th>
+            <th>Units Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Inventory rows will be added here dynamically -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Request Management Section -->
+    <section id="requestSection">
+      <h2>Blood Requests</h2>
+      <form id="requestForm">
+        <input type="text" id="patientName" placeholder="Patient Name" required>
+        <input type="text" id="requestBloodGroup" placeholder="Blood Group" required>
+        <input type="number" id="requestUnits" placeholder="Units Required" required>
+        <input type="text" id="hospitalName" placeholder="Hospital Name" required>
+        <button type="submit">Submit Request</button>
+      </form>
+      <h3>Request List</h3>
+      <table id="requestTable">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Blood Group</th>
+            <th>Units Required</th>
+            <th>Hospital Name</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Request rows will be added here dynamically -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Blood Bank Management System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
